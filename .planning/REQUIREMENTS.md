@@ -7,7 +7,7 @@
 
 ### Project Setup
 
-- [ ] **SETUP-01**: Phaser 3 project scaffolded with modern build tooling (Vite)
+- [x] **SETUP-01**: Phaser 3 project scaffolded with modern build tooling (Vite)
 - [ ] **SETUP-02**: Project deployable to GitHub Pages as static files
 - [ ] **SETUP-03**: GitHub repository with automated deploy workflow (GitHub Actions)
 
@@ -71,7 +71,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SETUP-01 | Phase 1 | Pending |
+| SETUP-01 | Phase 1 | Complete (plan 01-01) |
 | SETUP-02 | Phase 1 | Pending |
 | SETUP-03 | Phase 1 | Pending |
 | PLAY-01 | Phase 2 | Pending |

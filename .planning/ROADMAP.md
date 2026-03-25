@@ -14,11 +14,12 @@
 
 ### Plans
 
-#### 1.1 — Scaffold Phaser 3 + Vite project
+#### 1.1 — Scaffold Phaser 3 + Vite project [COMPLETE - 2026-03-25]
 - Initialize Vite project with Phaser 3 as a dependency
 - Configure TypeScript (optional but preferred for a game project)
 - Set up `index.html` entry point and basic Phaser game config (canvas, dimensions)
 - Verify local dev server runs: `npm run dev`
+- SUMMARY: /Users/norhther/platformer/.planning/phases/01-project-foundation/01-SUMMARY.md
 
 #### 1.2 — GitHub Pages deploy pipeline
 - Create GitHub repository
@@ -26,9 +27,9 @@
 - Verify deploy works: game URL is live
 
 **Success criteria:**
-- [ ] `npm run dev` starts a local server with a Phaser canvas visible
-- [ ] Pushing to `main` triggers GitHub Actions and deploys to GitHub Pages
-- [ ] Live URL loads the game in a browser
+- [x] `npm run dev` starts a local server with a Phaser canvas visible (plan 1.1 complete — checkpoint pending)
+- [ ] Pushing to `main` triggers GitHub Actions and deploys to GitHub Pages (plan 1.2)
+- [ ] Live URL loads the game in a browser (plan 1.2)
 
 **Requirements covered:** SETUP-01, SETUP-02, SETUP-03
 
