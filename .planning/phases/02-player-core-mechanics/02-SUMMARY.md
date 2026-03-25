@@ -93,6 +93,14 @@ None - no external service configuration required.
 - isDead gate pattern can be extended for damage/invincibility frames in enemy collision (Phase 03+)
 - Plan 03 (UIScene / HUD) can read currentLevel without any death/respawn interference
 
+## Self-Check: PASSED
+
+- FOUND: src/scenes/GameScene.ts
+- FOUND: .planning/phases/02-player-core-mechanics/02-SUMMARY.md
+- FOUND commit: 9eb2b4d (task commit)
+- TypeScript: compiles clean (npx tsc --noEmit exits 0)
+- Build: succeeds (npm run build exits 0)
+
 ---
 *Phase: 02-player-core-mechanics*
 *Completed: 2026-03-25*
