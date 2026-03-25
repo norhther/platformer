@@ -5,6 +5,7 @@ export default class GameScene extends Phaser.Scene {
   private ground!: Phaser.Physics.Arcade.StaticGroup;
   private cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
   private wasd!: { left: Phaser.Input.Keyboard.Key; right: Phaser.Input.Keyboard.Key; up: Phaser.Input.Keyboard.Key };
+  private isDead: boolean = false;
   private readonly WALK_SPEED = 180;
   private readonly JUMP_VELOCITY = -420;
   private readonly SPAWN_X = 100;
@@ -66,6 +67,15 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update(): void {
+    // Pit detection — canvas is 600px tall; anything below 620 is off-screen
+    if (!this.isDead && this.player.y > 620) {
+      this.handleDeath();
+      return;
+    }
+
+    // Gate all input during death animation
+    if (this.isDead) return;
+
     const body = this.player.body as Phaser.Physics.Arcade.Body;
     const onGround = body.blocked.down;
 
@@ -89,5 +99,30 @@ export default class GameScene extends Phaser.Scene {
     if (jumpPressed && onGround) {
       this.player.setVelocityY(this.JUMP_VELOCITY);
     }
+  }
+
+  private handleDeath(): void {
+    this.isDead = true;
+    // Stop player momentum immediately
+    this.player.setVelocity(0, 0);
+
+    // Flash tween: alpha oscillates 0→1 six times, then calls respawn
+    this.tweens.add({
+      targets: this.player,
+      alpha: { from: 0, to: 1 },
+      duration: 100,
+      repeat: 5,
+      yoyo: true,
+      onComplete: () => {
+        this.respawn();
+      },
+    });
+  }
+
+  private respawn(): void {
+    this.player.setPosition(this.SPAWN_X, this.SPAWN_Y);
+    this.player.setVelocity(0, 0);
+    this.player.setAlpha(1);
+    this.isDead = false;
   }
 }
