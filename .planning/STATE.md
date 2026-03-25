@@ -2,13 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-last_updated: "2026-03-25T13:35:00Z"
+current_plan: 1
+status: Executing Phase 02
+stopped_at: Completed 02-player-core-mechanics plan 01 — MenuScene and GameScene with player controls, scene transitions, and physics ground
+last_updated: "2026-03-25T14:16:38.364Z"
 progress:
   total_phases: 3
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 5
+  completed_plans: 3
 ---
 
 # Project State
@@ -23,7 +25,7 @@ See: .planning/PROJECT.md (updated 2026-03-25)
 ## Status
 
 - **Phase:** 01-project-foundation COMPLETE
-- **Current Plan:** Phase 01 fully complete (2/2 plans done) — ready to begin Phase 02
+- **Current Plan:** 1
 - **Last action:** Completed plan 02 — GitHub Actions CI/CD pipeline live, game deployed to https://norhther.github.io/platformer/
 - **Next action:** Begin Phase 02, Plan 01 (player sprite and movement)
 
@@ -39,6 +41,9 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 - `html, body { width: 100%; height: 100% }` added to index.html — required for flex centering to span full viewport reliably across browsers
 - `base: '/platformer/'` in vite.config.ts — required for GitHub Pages to resolve assets under the repo subpath
 - peaceiris/actions-gh-pages@v3 used to publish dist/ to gh-pages branch — minimal configuration, proven approach
+- [Phase 02-player-core-mechanics]: Textures generated programmatically in preload() via this.make.graphics — no external assets required for player or ground sprites
+- [Phase 02-player-core-mechanics]: Jump gated by body.blocked.down + JustDown to prevent double-jump and hold-to-repeat
+- [Phase 02-player-core-mechanics]: currentLevel=1 public field on GameScene reserved for UIScene in Plan 03
 
 ## Performance Metrics
 
@@ -46,6 +51,7 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 |-------|------|----------|-------|-------|
 | 01-project-foundation | 01 | 2min | 2/3 | 7 |
 | 01-project-foundation | 02 | 15min | 3/3 | 3 |
+| Phase 02-player-core-mechanics P01 | 2 | 3 tasks | 4 files |
 
 ## Known Issues
 
@@ -53,5 +59,5 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 
 ## Last Session
 
-- **Stopped at:** Completed plan 02 — Phase 01 fully complete, live URL confirmed at https://norhther.github.io/platformer/
+- **Stopped at:** Completed 02-player-core-mechanics plan 01 — MenuScene and GameScene with player controls, scene transitions, and physics ground
 - **Timestamp:** 2026-03-25T13:35:00Z
