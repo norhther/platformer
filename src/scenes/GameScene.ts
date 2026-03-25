@@ -64,6 +64,9 @@ export default class GameScene extends Phaser.Scene {
       right: this.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.D),
       up: this.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.W),
     };
+
+    // Launch HUD overlay in parallel (runs alongside GameScene)
+    this.scene.launch('UIScene', { level: this.currentLevel });
   }
 
   update(): void {
@@ -106,23 +109,18 @@ export default class GameScene extends Phaser.Scene {
     // Stop player momentum immediately
     this.player.setVelocity(0, 0);
 
-    // Flash tween: alpha oscillates 0→1 six times, then calls respawn
+    // Flash tween: alpha oscillates 0→1, then transitions to GameOverScene
     this.tweens.add({
       targets: this.player,
       alpha: { from: 0, to: 1 },
       duration: 100,
-      repeat: 5,
+      repeat: 3,
       yoyo: true,
       onComplete: () => {
-        this.respawn();
+        this.scene.stop('UIScene');
+        this.scene.start('GameOverScene', { level: this.currentLevel });
       },
     });
   }
 
-  private respawn(): void {
-    this.player.setPosition(this.SPAWN_X, this.SPAWN_Y);
-    this.player.setVelocity(0, 0);
-    this.player.setAlpha(1);
-    this.isDead = false;
-  }
 }
