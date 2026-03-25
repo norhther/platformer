@@ -37,9 +37,9 @@
 
 ### UI
 
-- [ ] **UI-01**: Main menu with "Play" button
-- [ ] **UI-02**: Game over screen with "Retry" button
-- [ ] **UI-03**: HUD shows current level number
+- [x] **UI-01**: Main menu with "Play" button
+- [x] **UI-02**: Game over screen with "Retry" button
+- [x] **UI-03**: HUD shows current level number
 
 ## v2 Requirements
 
@@ -89,9 +89,9 @@
 | ENMY-02 | Phase 3 | Pending |
 | ENMY-03 | Phase 3 | Pending |
 | ENMY-04 | Phase 3 | Pending |
-| UI-01 | Phase 2 | Pending |
-| UI-02 | Phase 2 | Pending |
-| UI-03 | Phase 2 | Pending |
+| UI-01 | Phase 2 | Complete |
+| UI-02 | Phase 2 | Complete |
+| UI-03 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 21 total

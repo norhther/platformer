@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: 1
 status: Executing Phase 02
-stopped_at: Completed 02-player-core-mechanics plan 02 — pit detection, death flash tween, and respawn in GameScene
-last_updated: "2026-03-25T14:18:57.807Z"
+stopped_at: Completed 02-player-core-mechanics plan 03 — UIScene HUD overlay, GameOverScene, full scene flow wired
+last_updated: "2026-03-25T14:23:29.793Z"
 progress:
   total_phases: 3
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 5
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -46,6 +46,9 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 - [Phase 02-player-core-mechanics]: currentLevel=1 public field on GameScene reserved for UIScene in Plan 03
 - [Phase 02-player-core-mechanics]: isDead boolean gate prevents double-trigger of handleDeath() during flash tween
 - [Phase 02-player-core-mechanics]: Flash tween uses repeat:5 + yoyo:true = 6 visible oscillations before onComplete fires respawn()
+- [Phase 02-player-core-mechanics]: UIScene launched with scene.launch() not scene.start() so HUD runs in parallel with GameScene
+- [Phase 02-player-core-mechanics]: scene.get() cast via unknown to avoid TS2352 error when narrowing Phaser.Scene to GameScene interface
+- [Phase 02-player-core-mechanics]: respawn() method removed (was unused after death->GameOverScene transition, caused TS6133 error)
 
 ## Performance Metrics
 
@@ -55,6 +58,7 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 | 01-project-foundation | 02 | 15min | 3/3 | 3 |
 | Phase 02-player-core-mechanics P01 | 2 | 3 tasks | 4 files |
 | Phase 02-player-core-mechanics P02 | 5min | 1 tasks | 1 files |
+| Phase 02-player-core-mechanics P03 | 5min | 2 tasks | 4 files |
 
 ## Known Issues
 
@@ -62,5 +66,5 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 
 ## Last Session
 
-- **Stopped at:** Completed 02-player-core-mechanics plan 02 — pit detection, death flash tween, and respawn in GameScene
+- **Stopped at:** Completed 02-player-core-mechanics plan 03 — UIScene HUD overlay, GameOverScene, full scene flow wired
 - **Timestamp:** 2026-03-25T13:35:00Z
