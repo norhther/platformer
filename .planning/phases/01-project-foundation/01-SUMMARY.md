@@ -64,7 +64,7 @@ completed: 2026-03-25
 - **Duration:** ~2 min
 - **Started:** 2026-03-25T13:11:04Z
 - **Completed:** 2026-03-25T13:12:37Z
-- **Tasks:** 2 of 3 (Task 3 is human visual verification checkpoint)
+- **Tasks:** 3 of 3 (all complete including human visual verification)
 - **Files modified:** 7 created, 0 modified
 
 ## Accomplishments
@@ -79,7 +79,8 @@ Each task was committed atomically:
 
 1. **Task 1: Initialize Vite + TypeScript project with Phaser 3** - `8237fae` (feat)
 2. **Task 2: Create BootScene and Phaser Game entry point** - `3d2d6f2` (feat)
-3. **Task 3: Verify local dev server** — checkpoint (human visual verification)
+3. **Task 3: Fix canvas centering + verify dev server** — `a875be8` (fix)
+   - Human verified canvas visible; centering fix applied before marking complete
 
 ## Files Created/Modified
 
@@ -110,10 +111,19 @@ Each task was committed atomically:
 - **Verification:** git status shows node_modules untracked after adding .gitignore
 - **Committed in:** 8237fae (Task 1 commit)
 
+**2. [Rule 1 - Bug] Fixed canvas centering — html/body width/height 100% missing**
+- **Found during:** Task 3 (human visual verification)
+- **Issue:** Canvas appeared slightly off-center to the right because `html` and `body` lacked explicit `width: 100%; height: 100%` — the flex layout on `body` only worked correctly with both dimensions set
+- **Fix:** Added `html, body { width: 100%; height: 100%; }` to index.html styles
+- **Files modified:** index.html
+- **Commit:** a875be8 (fix)
+
 ---
 
-**Total deviations:** 1 auto-fixed (1 blocking)
+**Total deviations:** 2 auto-fixed (1 blocking, 1 bug)
 **Impact on plan:** .gitignore is a standard requirement for any Node.js project — necessary to prevent 150MB+ node_modules from being committed.
+
+**Impact on plan (deviation 2):** Required for correct canvas centering — without this fix the canvas is off-center in all browsers where body doesn't inherit viewport dimensions by default.
 
 ## Issues Encountered
 
@@ -147,6 +157,7 @@ None — no external service configuration required.
 - FOUND: dist/assets/
 - FOUND commit 8237fae (Task 1)
 - FOUND commit 3d2d6f2 (Task 2)
+- FOUND commit a875be8 (centering fix / Task 3)
 
 ---
 *Phase: 01-project-foundation*

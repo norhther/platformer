@@ -27,7 +27,7 @@
 - Verify deploy works: game URL is live
 
 **Success criteria:**
-- [x] `npm run dev` starts a local server with a Phaser canvas visible (plan 1.1 complete — checkpoint pending)
+- [x] `npm run dev` starts a local server with a Phaser canvas visible and correctly centered (plan 1.1 complete)
 - [ ] Pushing to `main` triggers GitHub Actions and deploys to GitHub Pages (plan 1.2)
 - [ ] Live URL loads the game in a browser (plan 1.2)
 

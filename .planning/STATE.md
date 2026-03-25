@@ -23,9 +23,9 @@ See: .planning/PROJECT.md (updated 2026-03-25)
 ## Status
 
 - **Phase:** 01-project-foundation
-- **Current Plan:** 2 of 2 in phase (plan 01 complete, checkpoint pending visual verify)
-- **Last action:** Completed plan 01 — Phaser 3 + Vite + TypeScript scaffold
-- **Next action:** Human verify canvas at `npm run dev`, then execute plan 02
+- **Current Plan:** 2 of 2 in phase (plan 01 fully complete, executing plan 02)
+- **Last action:** Completed plan 01 — canvas centering fix applied and human verification passed
+- **Next action:** Execute plan 02 (player movement)
 
 ## Milestone
 
@@ -36,6 +36,7 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 - `base: './'` in vite.config.ts — required for GitHub Pages relative asset paths
 - Arcade physics gravity = 300 px/s² — pre-configured in main.ts so Phase 2 player inherits correct value
 - Canvas 800x600 with Phaser.Scale.FIT + CENTER_BOTH — responsive, centered, no distortion
+- `html, body { width: 100%; height: 100% }` added to index.html — required for flex centering to span full viewport reliably across browsers
 
 ## Performance Metrics
 
@@ -45,5 +46,5 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 
 ## Last Session
 
-- **Stopped at:** Checkpoint Task 3 — human visual verification of canvas
-- **Timestamp:** 2026-03-25T13:13:00Z
+- **Stopped at:** Plan 01 complete — all 3 tasks done including centering fix and human verification
+- **Timestamp:** 2026-03-25T13:15:00Z
