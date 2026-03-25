@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: 1
 status: Executing Phase 02
-stopped_at: Completed 02-player-core-mechanics plan 01 — MenuScene and GameScene with player controls, scene transitions, and physics ground
-last_updated: "2026-03-25T14:16:38.364Z"
+stopped_at: Completed 02-player-core-mechanics plan 02 — pit detection, death flash tween, and respawn in GameScene
+last_updated: "2026-03-25T14:18:57.807Z"
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 5
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -44,6 +44,8 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 - [Phase 02-player-core-mechanics]: Textures generated programmatically in preload() via this.make.graphics — no external assets required for player or ground sprites
 - [Phase 02-player-core-mechanics]: Jump gated by body.blocked.down + JustDown to prevent double-jump and hold-to-repeat
 - [Phase 02-player-core-mechanics]: currentLevel=1 public field on GameScene reserved for UIScene in Plan 03
+- [Phase 02-player-core-mechanics]: isDead boolean gate prevents double-trigger of handleDeath() during flash tween
+- [Phase 02-player-core-mechanics]: Flash tween uses repeat:5 + yoyo:true = 6 visible oscillations before onComplete fires respawn()
 
 ## Performance Metrics
 
@@ -52,6 +54,7 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 | 01-project-foundation | 01 | 2min | 2/3 | 7 |
 | 01-project-foundation | 02 | 15min | 3/3 | 3 |
 | Phase 02-player-core-mechanics P01 | 2 | 3 tasks | 4 files |
+| Phase 02-player-core-mechanics P02 | 5min | 1 tasks | 1 files |
 
 ## Known Issues
 
@@ -59,5 +62,5 @@ v1.0 — Playable browser platformer with pixel art, 3 levels, enemies
 
 ## Last Session
 
-- **Stopped at:** Completed 02-player-core-mechanics plan 01 — MenuScene and GameScene with player controls, scene transitions, and physics ground
+- **Stopped at:** Completed 02-player-core-mechanics plan 02 — pit detection, death flash tween, and respawn in GameScene
 - **Timestamp:** 2026-03-25T13:35:00Z

@@ -13,12 +13,12 @@
 
 ### Player
 
-- [ ] **PLAY-01**: Player character renders as a pixel art sprite
-- [ ] **PLAY-02**: Player can move left and right with keyboard input
-- [ ] **PLAY-03**: Player can jump (single jump) with keyboard input
-- [ ] **PLAY-04**: Player has gravity and lands on platforms
-- [ ] **PLAY-05**: Player can die (fall into pit, touched by enemy)
-- [ ] **PLAY-06**: Player respawns at level start on death
+- [x] **PLAY-01**: Player character renders as a pixel art sprite
+- [x] **PLAY-02**: Player can move left and right with keyboard input
+- [x] **PLAY-03**: Player can jump (single jump) with keyboard input
+- [x] **PLAY-04**: Player has gravity and lands on platforms
+- [x] **PLAY-05**: Player can die (fall into pit, touched by enemy)
+- [x] **PLAY-06**: Player respawns at level start on death
 
 ### Levels
 
@@ -74,12 +74,12 @@
 | SETUP-01 | Phase 1 | Complete (plan 01-01) |
 | SETUP-02 | Phase 1 | Pending |
 | SETUP-03 | Phase 1 | Pending |
-| PLAY-01 | Phase 2 | Pending |
-| PLAY-02 | Phase 2 | Pending |
-| PLAY-03 | Phase 2 | Pending |
-| PLAY-04 | Phase 2 | Pending |
-| PLAY-05 | Phase 2 | Pending |
-| PLAY-06 | Phase 2 | Pending |
+| PLAY-01 | Phase 2 | Complete |
+| PLAY-02 | Phase 2 | Complete |
+| PLAY-03 | Phase 2 | Complete |
+| PLAY-04 | Phase 2 | Complete |
+| PLAY-05 | Phase 2 | Complete |
+| PLAY-06 | Phase 2 | Complete |
 | LVL-01 | Phase 3 | Pending |
 | LVL-02 | Phase 3 | Pending |
 | LVL-03 | Phase 3 | Pending |
