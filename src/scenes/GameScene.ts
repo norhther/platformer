@@ -39,8 +39,6 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create(): void {
-    const { width, height } = this.scale;
-
     // Ground — static physics group at bottom of canvas
     this.ground = this.physics.add.staticGroup();
     this.ground.create(400, 584, 'ground');  // y=584: 600 - 8 (half of 16px)
