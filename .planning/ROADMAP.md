@@ -44,28 +44,31 @@
 
 ### Plans
 
-#### 2.1 — Player sprite and movement
+#### 2.1 — Player sprite and movement [COMPLETE - 2026-03-25]
 - Add a pixel art player sprite (use a free CC0 asset, e.g. from itch.io or OpenGameArt)
 - Implement left/right movement with keyboard (arrow keys + WASD)
 - Implement single jump (Space or Up arrow)
 - Add Phaser Arcade physics: gravity, ground collision
+- SUMMARY: /Users/norhther/platformer/.planning/phases/02-player-core-mechanics/01-SUMMARY.md
 
-#### 2.2 — Player death and respawn
+#### 2.2 — Player death and respawn [COMPLETE - 2026-03-25]
 - Detect fall-into-pit (player.y > world bounds)
 - Implement death state and respawn at level start position
 - Add a simple death animation or flash effect
+- SUMMARY: /Users/norhther/platformer/.planning/phases/02-player-core-mechanics/02-SUMMARY.md
 
-#### 2.3 — UI: Main menu, HUD, Game Over
+#### 2.3 — UI: Main menu, HUD, Game Over [COMPLETE - 2026-03-25]
 - Main menu scene with "Play" button
 - HUD overlay: current level number (top-left)
 - Game Over scene with "Retry" button that restarts the current level
+- SUMMARY: /Users/norhther/platformer/.planning/phases/02-player-core-mechanics/02-03-SUMMARY.md
 
 **Success criteria:**
-- [ ] Player moves left/right and jumps with keyboard
-- [ ] Player falls and lands on platforms via Arcade physics
-- [ ] Player dies falling into a pit, respawns at start
-- [ ] Main menu → Play → Game → Game Over → Retry flow works
-- [ ] HUD shows level number
+- [x] Player moves left/right and jumps with keyboard
+- [x] Player falls and lands on platforms via Arcade physics
+- [x] Player dies falling into a pit, respawns at start
+- [x] Main menu → Play → Game → Game Over → Retry flow works
+- [x] HUD shows level number
 
 **Requirements covered:** PLAY-01, PLAY-02, PLAY-03, PLAY-04, PLAY-05, PLAY-06, UI-01, UI-02, UI-03
 
