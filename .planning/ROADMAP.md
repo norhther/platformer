@@ -21,15 +21,16 @@
 - Verify local dev server runs: `npm run dev`
 - SUMMARY: /Users/norhther/platformer/.planning/phases/01-project-foundation/01-SUMMARY.md
 
-#### 1.2 — GitHub Pages deploy pipeline
+#### 1.2 — GitHub Pages deploy pipeline [COMPLETE - 2026-03-25]
 - Create GitHub repository
 - Add GitHub Actions workflow: push to `main` → build → deploy to `gh-pages` branch
 - Verify deploy works: game URL is live
+- SUMMARY: /Users/norhther/platformer/.planning/phases/01-project-foundation/02-SUMMARY.md
 
 **Success criteria:**
 - [x] `npm run dev` starts a local server with a Phaser canvas visible and correctly centered (plan 1.1 complete)
-- [ ] Pushing to `main` triggers GitHub Actions and deploys to GitHub Pages (plan 1.2)
-- [ ] Live URL loads the game in a browser (plan 1.2)
+- [x] Pushing to `main` triggers GitHub Actions and deploys to GitHub Pages (plan 1.2 complete)
+- [x] Live URL loads the game in a browser at https://norhther.github.io/platformer/ (plan 1.2 complete)
 
 **Requirements covered:** SETUP-01, SETUP-02, SETUP-03
 
